@@ -100,9 +100,9 @@ function getWinnersByYear(inData, getYearsCB, getWinnersCB) {
     let returnThis = [];
     let years = getYearsCB(inData);
     let winners = getWinnersCB(inData);
-    for (let i=0; i < years.length; i++) {
-        returnThis.push(`In ${years[i]}, ${winners[i]} won the world cup!`)
-    }
+    years.forEach((item, index) => {
+        returnThis.push(`In ${item}, ${winners[index]} won the world cup!`)
+    });
 
     return returnThis;
 }
